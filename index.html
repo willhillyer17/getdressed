@@ -35,8 +35,14 @@
     </style>
 
     <!-- Include the new JavaScript files -->
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.1/firebase-database.js"></script>
+
+    <!-- Add the Firebase products that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.6.8/firebase-storage.js"></script>
+
     <script src="data.js"></script>
     <script src="firebase.js"></script>
     <script src="ui.js"></script>
@@ -47,8 +53,80 @@
     <!-- ... (rest of the HTML elements you provided) -->
     <div class="admin">
       <h2>Admin Panel</h2>
-      <!-- ... (rest of the HTML elements you provided) -->
+      <form class="form" id="add-item-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" required>
+        <label for="category">Category:</label>
+        <select id="category" required>
+          <option value="">-- Select a category --</option>
+          <option value="tops">Tops</option>
+          <option value="bottoms">Bottoms</option>
+          <option value="shoes">Shoes</option>
+          <option value="accessories">Accessories</option>
+        </select>
+        <label for="price">Price:</label>
+        <input type="number" id="price" required>
+        <input type="submit" value="Add Item">
+      </form>
+      <form class="form" id="delete-item-form">
+        <label for="delete-id">ID:</label>
+        <input type="text" id="delete-id" required>
+        <input type="submit" value="Delete Item">
+      </form>
+      <form class="form" id="add-category-form">
+        <label for="category-name">Category Name:</label>
+        <input type="text" id="category-name" required>
+        <input type="submit" value="Add Category">
+      </form>
+      <form class="form" id="delete-category-form">
+        <label for="delete-category">Category:</label>
+        <select id="delete-category" required>
+          <option value="">-- Select a category --</option>
+          <option value="tops">Tops</option>
+          <option value="bottoms">Bottoms</option>
+          <option value="shoes">Shoes</option>
+          <option value="accessories">Accessories</option>
+        </select>
+        <input type="submit" value="Delete Category">
+      </form>
+      <form class="form" id="add-weight-form">
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" required>
+        <input type="submit" value="Add Weight">
+      </form>
+      <form class="form" id="delete-weight-form">
+        <label for="delete-weight">Weight:</label>
+        <select id="delete-weight" required>
+          <option value="">-- Select a weight --</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="5">5</option>
+          <option value="6">6</option>
+          <option value="7">7</option>
+          <option value="8">8</option>
+          <option value="9">9</option>
+          <option value="10">10</option>
+        </select>
+        <input type="submit" value="Delete Weight">
+      </form>
       <div class="message" id="message" style="display: none;"></div>
     </div>
+
+    <div id="login">
+      <h2>Login</h2>
+      <form id="login-form">
+        <label for="email">Email:</label>
+        <input type="email" id="email" required>
+        <br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" required>
+        <br>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+
+    <div id="item-list"></div>
   </body>
 </html>
