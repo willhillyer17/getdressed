@@ -465,4 +465,7 @@ adjustWeightButton.addEventListener("click", (event) => {
       message.style.color = "#FF0000";
     });
 });
-  
+} // <-- Closing brace for the 'getDressed()' function
+document.addEventListener('DOMContentLoaded', () => {
+  getDressed();
+});
