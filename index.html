@@ -34,74 +34,21 @@
       }
     </style>
 
-    <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
-
-    <!-- Add Firebase products that you want to use -->
-    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <!-- Include the new JavaScript files -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.2/firebase-firestore.js"></script>
+    <script src="data.js"></script>
+    <script src="firebase.js"></script>
+    <script src="ui.js"></script>
+    <script src="script.js"></script>
   </head>
   <body>
     <h1>Outfit Generator</h1>
-    <div class="login">
-      <form>
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" />
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password" />
-        <input type="submit" value="Login" />
-      </form>
-    </div>
-    <div class="generator">
-      <h2>Generate an Outfit</h2>
-      <button id="generateButton">Generate</button>
-      <div class="outfits">
-        <div class="outfit-container">
-          <div class="outfitDisplay"></div>
-          <button class="regenerateButton" disabled>Regenerate</button>
-          <button class="selectButton" disabled>Select</button>
-        </div>
-        <div class="outfit-container">
-          <div class="outfitDisplay"></div>
-          <button class="regenerateButton" disabled>Regenerate</button>
-          <button class="selectButton" disabled>Select</button>
-        </div>
-      </div>
-    </div>
+    <!-- ... (rest of the HTML elements you provided) -->
     <div class="admin">
       <h2>Admin Panel</h2>
-      <div class="form">
-        <label for="categoryName">Category Name:</label>
-        <input type="text" id="categoryName" name="categoryName" />
-        <input type="submit" id="addCategoryButton" value="Add Category" />
-      </div>
-      <div class="form">
-        <label for="categorySelect">Category:</label>
-        <select id="categorySelect"></select>
-        <label for="itemName">Item Name:</label>
-        <input type="text" id="itemName" name="itemName" />
-        <label for="itemWeight">Item Weight:</label>
-        <input type="number" id="itemWeight" name="itemWeight" min="1" max="10" />
-        <input type="submit" id="addItemButton" value="Add Item" />
-        </div>
-      </div>
-      <div class="form">
-        <label for="categorySelect2">Category:</label>
-        <select id="categorySelect2"></select>
-        <label for="itemSelect">Item:</label>
-        <select id="itemSelect"></select>
-        <label for="newWeight">New Weight:</label>
-        <input type="number" id="newWeight" name="newWeight" min="1" max="10" />
-        <input type="submit" id="adjustWeightButton" value="Adjust Weight" />
-      </div>
-      <div class="form">
-        <label for="categorySelect3">Category:</label>
-        <select id="categorySelect3"></select>
-        <label for="itemSelect2">Item:</label>
-        <select id="itemSelect2"></select>
-        <input type="submit" id="removeItemButton" value="Remove Item" />
-      </div>
-      <div class="message"></div>
+      <!-- ... (rest of the HTML elements you provided) -->
+      <div class="message" id="message" style="display: none;"></div>
     </div>
-    <script src="script.js"></script>
   </body>
 </html>
