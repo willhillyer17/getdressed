@@ -1,7 +1,7 @@
 const firebaseConfig = {
   // Your Firebase configuration goes here
-   // Your firebase configuration
- apiKey: "AIzaSyAwROKE_hU2jrclO5LxIoVZSvxks4GrqAQ",
+  // Your firebase configuration
+  apiKey: "AIzaSyAwROKE_hU2jrclO5LxIoVZSvxks4GrqAQ",
   authDomain: "password-347421.firebaseapp.com",
   databaseURL: "https://password-347421-default-rtdb.firebaseio.com",
   projectId: "password-347421",
@@ -13,8 +13,8 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-const db = firebase.database();
-const itemRef = db.ref("items");
+const database = firebase.database();
+const itemRef = database.ref("items");
 
 const ADMIN_UID = "zaRkadq2W9byUgBYTAdxOfLwukF3";
 const USER_UID = "IgbE2iXfPsNROXrQBipOoWgm24j2";
